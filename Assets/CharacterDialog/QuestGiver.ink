@@ -6,7 +6,7 @@ Hello Brave Adventurer! I have a quest!
     --- It's red.
     ->choices
     * Okay now tell me about the quest.
-        ---Kill Ten Rats.
+        ---There is an enemy ahead. You must defeat it.
 
--Come Find me when you've completed the quest
+- I wish you luck on your quest!
 -> END

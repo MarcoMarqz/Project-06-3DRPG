@@ -98,15 +98,22 @@ public class BasicInkExample : MonoBehaviour {
 		return choice;
 	}
 
-	// Destroys all the children of this gameobject (all the UI)
-	void RemoveChildren () {
-		int childCount = canvas.transform.childCount;
-		for (int i = childCount - 1; i >= 0; --i) {
-			Destroy (canvas.transform.GetChild (i).gameObject);
-		}
-	}
+    // Destroys all the children of this gameobject (all the UI)
+    void RemoveChildren()
+    {
+        int childCount = canvas.transform.childCount;
+        for (int i = childCount - 1; i >= 0; --i)
+        {
+            Transform child = canvas.transform.GetChild(i);
+            if (child.name != "ScoreText")
+            { // Don't destroy ScoreText
+                Destroy(child.gameObject);
+            }
+        }
+    }
 
-	[SerializeField]
+
+    [SerializeField]
 	private TextAsset inkJSONAsset = null;
 	public Story story;
 
